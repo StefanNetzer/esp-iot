@@ -410,7 +410,7 @@ namespace ESP8266_IoT {
      */
     //% subcategory=MQTT weight=21
     //% blockId=sendMQTT block="publish %msg to Topic:%topic with Qos:%qos"
-    //% msg.defl=hello
+    //% msg.defl=3.14
     //% topic.defl=topic/1
     export function publishMqttMessage(msg: number, topic: string, qos: QosList): void {
         sendAT(`AT+MQTTPUB=0,"${topic}","${msg}",${qos},0`, 1000)
