@@ -417,6 +417,9 @@ namespace ESP8266_IoT {
         recvString = ""
     }
 
+    /*
+     * send text
+     */
     //% subcategory=MQTT weight=21
     //% blockId=sendText block="publish %msg to Topic:%topic with Qos:%qos"
     //% msg.defl=hello
