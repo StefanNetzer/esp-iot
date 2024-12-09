@@ -411,16 +411,16 @@ namespace ESP8266_IoT {
     //% subcategory=MQTT weight=21
     //% blockId=sendMQTT block="publish %nmb to Topic:%topic with Qos:%qos"
     //% msg.defl=3.14
-    //% topic.defl=topic/1
+    //% topic.defl=topic/number
     export function publishMqttMessage(nmb: number, topic: string, qos: QosList): void {
         sendAT(`AT+MQTTPUB=0,"${topic}","${nmb}",${qos},0`, 1000)
         recvString = ""
     }
 
     //% subcategory=MQTT weight=21
-    //% blockId=sendMQTT block="publish %msg to Topic:%topic with Qos:%qos"
+    //% blockId=sendText block="publish %msg to Topic:%topic with Qos:%qos"
     //% msg.defl=hello
-    //% topic.defl=topic/1
+    //% topic.defl=topic/text
     export function publishMqttText(msg: string, topic: string, qos: QosList): void {
         sendAT(`AT+MQTTPUB=0,"${topic}","${msg}",${qos},0`, 1000)
         recvString = ""
